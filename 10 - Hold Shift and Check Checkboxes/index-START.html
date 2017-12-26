@@ -99,6 +99,32 @@
   </div>
 
 <script>
+
+  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+  // console.log(checkboxes)
+  // checkboxes[1].addEventListener("click", rememberClick);
+
+  // const rememberClick = checkboxes.forEach(function(element) {
+  //   console.log(element)
+  // })
+
+  let lastChecked;
+
+  function handleClick(e) {
+    //check if they had shift key down
+    //and if they are checking it
+    if (e.shiftKey && this.checked) {
+      //do what you need 6:42 mark
+    }
+    lastChecked = this;
+  }
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener("click", handleClick))
+
+
+
+
+
 </script>
 </body>
 </html>
